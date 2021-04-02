@@ -1,0 +1,10 @@
+# This file contains values from Cookiecutter
+
+default_context:
+  project_name: "muzakbot"
+  project_description: "Awesome /mu/zak bot"
+  organization: "brannt"
+  license: "MIT"
+  version: "0.1.0"
+  github_name: "muzakbot"
+  email: "brannt@yandex.ru"
