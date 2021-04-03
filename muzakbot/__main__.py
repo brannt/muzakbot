@@ -24,4 +24,5 @@ def main(config, log_level):
     logging.basicConfig(level=settings.log_level)
     start_bot(settings=settings)
 
-main(**vars(parse_args()))
+if __name__ == '__main__':
+    main(**vars(parse_args()))
