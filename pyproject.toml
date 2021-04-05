@@ -29,7 +29,7 @@ classifiers = [  # Update me
 
 [tool.poetry.scripts]
 # Entry points for the package https://python-poetry.org/docs/pyproject/#scripts
-"muzakbot" = "muzakbot.__main__:app"
+"muzakbot" = "muzakbot.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"

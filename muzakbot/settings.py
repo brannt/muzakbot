@@ -1,17 +1,17 @@
-from enum import Enum
-import logging
 from typing import Optional
 
-from pydantic import BaseModel, BaseSettings, AnyHttpUrl
+import logging
+from enum import Enum
 
+from pydantic import AnyHttpUrl, BaseModel, BaseSettings
 
-ENV_PREFIX = 'MUZAKBOT_'
+ENV_PREFIX = "MUZAKBOT_"
 
 
 class HandlerStrategy(Enum):
-    ALL = 'all'
-    MENTION = 'mention'
-    COMMAND = 'command'
+    ALL = "all"
+    MENTION = "mention"
+    COMMAND = "command"
 
 
 class ChatSettings(BaseModel):
@@ -23,7 +23,11 @@ class ChatSettings(BaseModel):
 
 class MuzakbotSettings(BaseSettings):
     chats: dict[str, ChatSettings] = {
-        'default': ChatSettings(button_row_length=3, handler_strategy=HandlerStrategy.COMMAND, check_domains=['spotify', 'deezer', 'yandex', 'apple'])
+        "default": ChatSettings(
+            button_row_length=3,
+            handler_strategy=HandlerStrategy.COMMAND,
+            check_domains=["spotify", "deezer", "yandex", "apple"],
+        )
     }
     token: str
     log_level: int = logging.INFO

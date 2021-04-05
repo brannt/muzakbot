@@ -31,21 +31,13 @@ poetry add muzakbot
 Then you can run
 
 ```bash
-muzakbot --help
-```
-
-```bash
-muzakbot --name Roman
+MUZAKBOT_TOKEN=$token muzakbot -c $config_path
 ```
 
 or if installed with `Poetry`:
 
 ```bash
-poetry run muzakbot --help
-```
-
-```bash
-poetry run muzakbot --name Roman
+MUZAKBOT_TOKEN=$token poetry run muzakbot -c $config_path
 ```
 
 ### Makefile usage
